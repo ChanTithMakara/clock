@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Clock App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <!-- World Clock -->
+    <div class="container text-center my-3">
+        <h2>World Clock</h2>
+        <select id="country-select" class="form-select">
+            <option value="Asia/Phnom_Penh">Cambodia</option>
+            <!-- Add more timezones as needed -->
+        </select>
+        <div id="world-clock-display" class="my-2">Loading...</div>
+    </div>
+
+    <!-- Alarm -->
+    <div class="container text-center my-3">
+        <h2>Alarm</h2>
+        <button class="btn btn-primary" onclick="addAlarm()">Add Alarm</button>
+        <div id="alarms-list"></div>
+    </div>
+
+    <!-- Stopwatch -->
+    <div class="container text-center my-3">
+        <h2>Stopwatch</h2>
+        <div id="stopwatchDisplay" class="my-2">00:00:00</div>
+        <button class="btn btn-success" onclick="startStopwatch()">Start</button>
+        <button class="btn btn-warning" onclick="stopStopwatch()">Stop</button>
+        <button class="btn btn-danger" onclick="resetStopwatch()">Reset</button>
+    </div>
+
+    <!-- Timer -->
+    <div class="container text-center my-3">
+        <h2>Timer</h2>
+        <input type="number" id="timerHours" class="form-control" placeholder="Hours">
+        <input type="number" id="timerMinutes" class="form-control" placeholder="Minutes">
+        <input type="number" id="timerSeconds" class="form-control" placeholder="Seconds">
+        <button class="btn btn-primary" onclick="startTimer()">Start Timer</button>
+        <div id="timerDisplay" class="my-2">00:00:00</div>
+    </div>
+
+    <!-- Install Button -->
+    <div class="text-center my-3">
+        <button id="installButton" class="btn btn-primary" style="display:none;">Download App</button>
+    </div>
+</body>
+</html>
